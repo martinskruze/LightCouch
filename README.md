@@ -1,12 +1,10 @@
-CouchDB Java API
-================
+## CouchDB Java API
 
-* Homepage: <http://www.lightcouch.org/> 
-
-LightCouch aims at providing a simple and easy-to-use APIs for accessing CouchDB databases.
-
-It offers a powerful and lightweight persistence interface with minimal code base and dependency.
-
-Getting Started guide is available on the website at: <http://www.lightcouch.org/getstarted.html>
-
-API documentation and User Guide: <http://www.lightcouch.org/docs.html>
+The main differences compared to ahmedyha's version are:
+0. couchdb-lucene integration
+1. _revs_info support
+2. refactored design document loading
+3. fixed various JRuby classloader issues
+4. fixed design document loading on Windows
+5. does not lockup under multithreaded load
+6. // !code couchapp-style js macros 

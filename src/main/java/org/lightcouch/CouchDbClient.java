@@ -270,7 +270,7 @@ public final class CouchDbClient extends CouchDbClientBase {
         assertNotEmpty(q, "Query");
         URIBuilder builder = builder(getFtsUri()).path("_design/")
                 .path(q.getDesignName()).path("/").path(q.getIndexName())
-                .query("stale", "ok")
+                .query("stale", "update_after")
                 .query("q", q.getQuery())
                 .query("sort", q.getSort())
                 .query("default_operator", "AND")

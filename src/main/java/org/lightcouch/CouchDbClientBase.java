@@ -263,7 +263,7 @@ abstract class CouchDbClientBase {
 		HttpResponse response = null;
 		try {
 			response = httpClient.execute(host, request, context);
-		} catch (IOException e) {
+		} catch (Exception e) {
 			request.abort();
 			log.error("Error executing request. " + e.getMessage());
 			throw new CouchDbException(e);
